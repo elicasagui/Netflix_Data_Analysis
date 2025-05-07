@@ -5,15 +5,25 @@ This repository contains an end-to-end exploratory data analysis (EDA) of Netfli
 
 ## Contents
 ```
-Netflix-EDA/ 
-├── data/ 
-│      └── netflix_data.csv 
-├── notebooks/ 
-│         └── notebook_Investigating netflix movies.ipynb
+Netflix_Data_Analysis/
+├── data/ # CSV files go here
+│ └── netflix_titles.csv
 │
-├── requirements.txt 
-│ 
-└── README.txt
+├── notebooks/ # Jupyter notebooks for EDA and testing
+│ └── images/
+│ └── exploratory_analysis.ipynb
+│ └── test/
+├── src/ # Source code for analysis
+│ ├── init.py # Makes src a Python package
+│ ├── load_data.py # Functions to load datasets
+│ ├── clean_data.py # Cleaning and preprocessing functions
+│ ├── analyze.py # EDA and summary statistics
+│ ├── visualize.py # Plotting functions (e.g., seaborn/matplotlib)
+│ └── utils.py # Helper functions
+├── main.py # Main execution script
+├── requirements.txt # Python dependencies
+└── README.md # This file
+
 ```
 ## Data Description
 - **netflix_data.csv**  
@@ -30,50 +40,86 @@ Netflix-EDA/
   - `description`     — Short summary of the content  
   - `genre`           — Genre category (Drama, Comedy, etc.)
 
+## Data Instructions
+
+**1. Download dataset from Kaggle**
+
+https://www.kaggle.com/datasets/shivamb/netflix-shows
+
+**2. Move the downloaded CSV file into the `data/` directory**
+
+```
+mkdir -p data/
+mv ~/Downloads/netflix_titles.csv data/
+```
 ## Setup & Installation
 
-1. **Install dependencies**
-
-```bash
+**1. Clone the repository:**
+   ```
+   git clone https://github.com/elicasagui/Netflix_Data_Analysis.git
+   cd Netflix_Data_Analysis
+```
+**2. (Optional) Create and activate a virtual environment**
+```
+python -m venv venv
+```
+On Windows
+```
+.\venv\Scripts\Activate
+```
+On macOS/Linux
+```
+source venv/bin/activate
+```
+**If PowerShell blocks script activation, run this command in PowerShell (as Administrator):**
+```
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+```
+Then activate the environment again:
+```
+.\venv\Scripts\Activate
+```
+**3. Install dependencies**
+```
 pip install -r requirements.txt
-2. How to Run
- Launch Jupyter Notebook
-
+```
+**4. Run the main script**
+```
+python main.py
+```
+**5. Launch Jupyter Notebook**
+```
  jupyter notebook
-3. Open notebooks/notebook_Investigating netflix movies.ipynb
+ ```
+**6. Open and run the notebook**
+```
+notebooks/exploratory_analysis.ipynb
+```
+## Running tests
+**1. Install pytest:**
+```
+pip install pytest
+```
+**2. Run tests:**
+```
+pytest tests/
+```
 
-4. Execute all cells to reproduce the cleaning, analysis, and visualization steps.
-Analysis Highlights
-Data Cleaning & Validation
-Removed entries not classified as "Movie"
+## Project Questions
+1. What is the most common type of content on Netflix?
+2. Which countries produce the most Netflix content?
+3. What genres are most frequently listed?
+4. What are the trends in releases over time?
 
-Filtered titles released during the 1990s
+## Key Insights
+Insight ID	Description	Visualization
+1	Distribution of content types (Movies vs. TV Shows)	
+2	Top countries by content volume	
+3	Most popular genres on the platform	
 
-Handled missing values in director, country, and duration
+Full analysis available in exploratory_analysis.ipynb.
 
-Exploratory Visualizations
-Distribution of movie durations in the 1990s
-
-Frequency of genres among 1990s movies
-
-Top directors and contributing countries
-
-Yearly trends of releases during the decade
-
-Key Findings
-Most movies from the 1990s ranged between 80 and 100 minutes in duration
-
-"Drama" and "Action" were the most dominant genres
-
-The United States contributed the largest volume of 1990s titles
-
-Certain directors consistently appeared with multiple titles in this dataset
-
-Reproducibility & Extensibility
-All data processing and visualization code is contained in the notebook.
-To extend this project to other decades or include TV shows, simply adjust the filters in the notebook and rerun the analysis.
-
-Dependencies
+## Dependencies
 Python 3.8+
 
 pandas
@@ -88,10 +134,10 @@ jupyter
 
 (See requirements.txt for exact versions.)
 
-**License**
+## License
 This project was extracted from Data Camp scientist's course.
 
-**Contact**
+## Contact
 For questions or collaboration inquiries, please contact:
 Eliecer Castro
 
