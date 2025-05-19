@@ -1,148 +1,85 @@
-# Netflix 1990s Movies – Exploratory Data Analysis
+<h1>Netflix Data Analysis – Exploratory Data Analysis with Python</h1>
 
-## Project Overview
-This repository contains an end-to-end exploratory data analysis (EDA) of Netflix movies, with a focus on titles released during the 1990s. As a Data Scientist, the goal of this project is to uncover viewing trends, analyze duration patterns, and identify popular genres and international content during this iconic decade in cinema.
+<h2>Project Overview</h2>
+<p>
+This project performs an exploratory data analysis (EDA) on Netflix titles to discover trends and patterns in the available content. It uses Python libraries such as pandas, matplotlib, and seaborn. The goal is to analyze movie and TV show metadata to identify popular genres, release trends, duration patterns, and country distributions.
+</p>
 
-## Contents
-```
+<h2>📁 Repository Structure</h2>
+<pre><code>
 Netflix_Data_Analysis/
-├── data/ # CSV files go here
-│ └── netflix_titles.csv
-│
-├── notebooks/ # Jupyter notebooks for EDA and testing
-│ └── images/
-│ └── exploratory_analysis.ipynb
-│ └── test/
-├── src/ # Source code for analysis
-│ ├── init.py # Makes src a Python package
-│ ├── load_data.py # Functions to load datasets
-│ ├── clean_data.py # Cleaning and preprocessing functions
-│ ├── analyze.py # EDA and summary statistics
-│ ├── visualize.py # Plotting functions (e.g., seaborn/matplotlib)
-│ └── utils.py # Helper functions
-├── main.py # Main execution script
-├── requirements.txt # Python dependencies
-└── README.md # This file
+├── data/
+│   ├── raw/                 # Original dataset (e.g., netflix_titles.csv)
+│   └── processed/           # Cleaned data
+├── notebooks/
+│   ├── exploratory_analysis.ipynb
+│   └── images/              # Graphs for analysis
+├── src/
+│   ├── data/                # Data loading and cleaning scripts
+│   ├── visualization/       # Plotting functions
+├── requirements.txt
+├── README.md
+└── LICENSE
+</code></pre>
 
-```
-## Data Description
-- **netflix_data.csv**  
-  Contains metadata for Netflix titles, including:  
-  - `show_id`         — Unique identifier for each title  
-  - `type`            — Movie or TV Show  
-  - `title`           — Name of the content  
-  - `director`        — Director's name  
-  - `cast`            — Main cast members  
-  - `country`         — Country of origin  
-  - `date_added`      — Date it was added to Netflix  
-  - `release_year`    — Year the title was originally released  
-  - `duration`        — Length of the movie in minutes  
-  - `description`     — Short summary of the content  
-  - `genre`           — Genre category (Drama, Comedy, etc.)
+<h2>📊 Dataset</h2>
+<ul>
+  <li><strong>Source:</strong> <a href="https://www.kaggle.com/datasets/shivamb/netflix-shows" target="_blank">Netflix Titles Dataset on Kaggle</a></li>
+  <li><strong>Columns include:</strong> title, type, director, cast, country, release_year, rating, duration, genre, etc.</li>
+</ul>
 
-## Data Instructions
+<h2>🔧 Setup & Installation</h2>
 
-**1. Download dataset from Kaggle**
+<h3>1. Clone the repository</h3>
+<pre><code>git clone https://github.com/elicasagui/Netflix_Data_Analysis.git
+cd Netflix_Data_Analysis
+</code></pre>
 
-https://www.kaggle.com/datasets/shivamb/netflix-shows
+<h3>2. (Optional) Create a virtual environment</h3>
+<pre><code>python -m venv venv
+source venv/bin/activate  # or venv\Scripts\activate on Windows
+</code></pre>
 
-**2. Move the downloaded CSV file into the `data/` directory**
+<h3>3. Install dependencies</h3>
+<pre><code>pip install -r requirements.txt
+</code></pre>
 
-```
-mkdir -p data/
-mv ~/Downloads/netflix_titles.csv data/
-```
-## Setup & Installation
+<h3>4. Launch Jupyter Notebook</h3>
+<pre><code>jupyter notebook
+</code></pre>
 
-**1. Clone the repository:**
-   ```
-   git clone https://github.com/elicasagui/Netflix_Data_Analysis.git
-   cd Netflix_Data_Analysis
-```
-**2. (Optional) Create and activate a virtual environment**
-```
-python -m venv venv
-```
-On Windows
-```
-.\venv\Scripts\Activate
-```
-On macOS/Linux
-```
-source venv/bin/activate
-```
-**If PowerShell blocks script activation, run this command in PowerShell (as Administrator):**
-```
-Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-```
-Then activate the environment again:
-```
-.\venv\Scripts\Activate
-```
-**3. Install dependencies**
-```
-pip install -r requirements.txt
-```
-**4. Run the main script**
-```
-python main.py
-```
-**5. Launch Jupyter Notebook**
-```
- jupyter notebook
- ```
-**6. Open and run the notebook**
-```
-notebooks/exploratory_analysis.ipynb
-```
-## Running tests
-**1. Install pytest:**
-```
-pip install pytest
-```
-**2. Run tests:**
-```
-pytest tests/
-```
+<h2>📈 Key Insights (Sample Visualizations)</h2>
 
-## Project Questions
-1. What is the most common type of content on Netflix?
-2. Which countries produce the most Netflix content?
-3. What genres are most frequently listed?
-4. What are the trends in releases over time?
+<h3>Content by Year</h3>
+<p><img src="notebooks/images/content_by_year.png" alt="Content by Year" width="600"/></p>
 
-## Key Insights
-Insight ID	Description	Visualization
-1	Distribution of content types (Movies vs. TV Shows)	
-2	Top countries by content volume	
-3	Most popular genres on the platform	
+<h3>Top 10 Countries with Most Titles</h3>
+<p><img src="notebooks/images/top_countries.png" alt="Top Countries" width="600"/></p>
 
-Full analysis available in exploratory_analysis.ipynb.
+<h3>Movie Duration Distribution</h3>
+<p><img src="notebooks/images/duration_distribution.png" alt="Duration Distribution" width="600"/></p>
 
-## Dependencies
-Python 3.8+
+<h2>✅ Conclusions</h2>
+<ul>
+  <li>The number of Netflix releases peaked in recent years, especially 2019–2020.</li>
+  <li>The U.S. and India contribute the largest volume of content.</li>
+  <li>Most movies are around 90 minutes long, while TV Shows often have 1–2 seasons.</li>
+  <li>Popular genres include Drama, Comedy, and Documentary.</li>
+</ul>
 
-pandas
+<h2>📌 Future Work</h2>
+<ul>
+  <li>Add interactive visualizations using Plotly or Tableau</li>
+  <li>Build a content recommendation model</li>
+  <li>Analyze sentiment from descriptions or reviews (if available)</li>
+</ul>
 
-numpy
+<h2>📄 License</h2>
+<p>Distributed under the MIT License.</p>
 
-matplotlib
+<h2>📚 Acknowledgments</h2>
+<ul>
+  <li><a href="https://www.kaggle.com/datasets/shivamb/netflix-shows" target="_blank">Netflix dataset on Kaggle</a></li>
+  <li>Inspired by various EDA projects and dashboards</li>
+</ul>
 
-seaborn
-
-jupyter
-
-(See requirements.txt for exact versions.)
-
-## License
-This project was extracted from Data Camp scientist's course.
-
-## Contact
-For questions or collaboration inquiries, please contact:
-Eliecer Castro
-
-– Data Scientist
-
-– elicasagui@gmail.com
-
-– GitHub: https://github.com/elicasagui/Data-Analysis-.git
