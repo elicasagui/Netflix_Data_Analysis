@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <body>
 
   <h1>Netflix Data Analysis – Exploratory Data Analysis with Python</h1>
@@ -12,24 +11,36 @@
 
   <h2>📁 Repository Structure</h2>
   <pre><code>Netflix_Data_Analysis/
-├── data/
-│   ├── raw/                 # Original dataset (e.g., netflix_titles.csv)
-│   └── processed/           # Cleaned data
+├── data/                             # (empty or contains raw files)
 ├── notebooks/
-│   └── exploratory_analysis.ipynb
-│   └── images/              # Graphs for analysis
+│   ├── exploratory_analysis.ipynb
+│   └── images/
+│       └── netflix_movies_duration.png
 ├── src/
-│   ├── data/                # Data loading and cleaning scripts
-│   └── visualization/       # Plotting functions
-├── requirements.txt
+│   ├── data/
+│   │   ├── load_data.py
+│   │   └── clean_data.py
+│   └── visualization/
+│       └── plot.py
+├── .gitignore
 ├── README.md
-└── LICENSE
+└── requirements.txt
 </code></pre>
 
-  <h2>📊 Dataset</h2>
+  <h2>📊 Data Description</h2>
+  <p>The <code>netflix_data.csv</code> file includes movie and show metadata such as:</p>
   <ul>
-    <li><strong>Source:</strong> <a href="https://www.kaggle.com/datasets/shivamb/netflix-shows" target="_blank">Netflix Titles Dataset on Kaggle</a></li>
-    <li><strong>Key columns:</strong> <code>title</code>, <code>type</code>, <code>release_year</code>, <code>duration</code>, <code>genre</code>, etc.</li>
+    <li><strong>show_id</strong> – Unique identifier of the show</li>
+    <li><strong>type</strong> – “Movie” or “TV Show”</li>
+    <li><strong>title</strong> – Title of the show</li>
+    <li><strong>director</strong> – Director(s) of the show</li>
+    <li><strong>cast</strong> – Main cast members</li>
+    <li><strong>country</strong> – Country of origin</li>
+    <li><strong>date_added</strong> – Date the show was added to Netflix</li>
+    <li><strong>release_year</strong> – Year the show was released</li>
+    <li><strong>duration</strong> – Duration in minutes (for movies) or number of seasons</li>
+    <li><strong>description</strong> – Brief synopsis of the show</li>
+    <li><strong>genre</strong> – Genre(s) of the show</li>
   </ul>
 
   <h2>🔧 Setup &amp; Installation</h2>
@@ -51,24 +62,33 @@ cd Netflix_Data_Analysis
   </ol>
 
   <h2>📈 Key Insights</h2>
-  <ul>
-    <li>
-      <strong>Most Frequent Movie Duration in the 1990s:</strong>  
-      Approximately <code>100</code> minutes.<br>
-      <pre><code># duration = 100</code></pre>
-    </li>
-    <li>
-      <strong>Number of Short Action Movies (&lt; 90 min) in the 1990s:</strong>  
-      <code>7</code>.<br>
-      <pre><code># short_movie_count = 7</code></pre>
-      <img src="notebooks/images/netflix_movies_duration.png" alt="Distribution of Movie Durations" />
-    </li>
-  </ul>
+  <ul>   
+  <li>
+    <strong>Most Frequent Movie Duration in the 1990s:</strong>  
+    Approximately <code>100</code> minutes.<br>
+    <pre><code># duration = 100</code></pre>
+  </li>
+  <li>
+    <strong>Number of Short Action Movies (&lt; 90 min) in the 1990s:</strong>  
+    <code>7</code>.<br>
+    <pre><code># short_movie_count = 7</code></pre>
+    <img 
+      src="notebooks/images/netflix _movies_duration.png" 
+      alt="Distribution of Movie Durations" 
+      style="max-width:40%; height:auto; border:1px solid #ccc; margin-top:0.5em;"
+    />
+  </li>
+</ul>
 
   <h2>📄 License</h2>
-  <p>Distributed under the MIT License.</p>
+  <p>This project was developed during a DataCamp data science course..</p>
+  
+<h2>📄 Created by </h2>
+<p>Eliecer Castro</p>
+<p>Data Scientist<p>
 
 </body>
 </html>
+
 
 
