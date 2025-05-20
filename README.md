@@ -77,8 +77,8 @@ python -m pip install -r requirements.txt</code></pre>
   <ul>   
   <li>
     <strong>Most Frequent Movie Duration in the 1990s:</strong>  
-    Approximately <code>100</code> minutes.<br>
-    <pre><code># duration = 100</code></pre>
+    Approximately <code>94</code> minutes.<br>
+    <pre><code># duration = 94</code></pre>
   </li>
   <li>
     <strong>Number of Short Action Movies (&lt; 90 min) in the 1990s:</strong>  
