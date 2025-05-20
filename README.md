@@ -57,7 +57,7 @@ cd Netflix_Data_Analysis
     </li>
     <li>
       <strong>Launch Jupyter Notebook</strong><br>
-      <pre><code>jupyter notebook</code></pre>
+      <pre><code>jupyter lab</code></pre>
     </li>
   </ol>
 
