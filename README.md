@@ -48,16 +48,28 @@
     <li>
       <strong>Clone the repository</strong><br>
       <pre><code>git clone https://github.com/elicasagui/Netflix_Data_Analysis.git
-cd Netflix_Data_Analysis
-</code></pre>
+cd Netflix_Data_Analysis</code></pre>
+    </li>
+    <li>
+      <strong>Create a virtual environment</strong><br>
+      <pre><code>python -m venv venv</code></pre>
+    </li>
+    <li>
+      <strong>Activate the virtual environment (PowerShell)</strong><br>
+      <pre><code>Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+.\venv\Scripts\Activate</code></pre>
+      <em>— this temporarily allows script execution and then activates the venv</em>
     </li>
     <li>
       <strong>Install dependencies</strong><br>
-      <pre><code>pip install -r requirements.txt</code></pre>
+      <pre><code>python -m pip install --upgrade pip
+python -m pip install -r requirements.txt</code></pre>
     </li>
     <li>
-      <strong>Launch Jupyter Notebook</strong><br>
+      <strong>Launch JupyterLab or Notebook</strong><br>
       <pre><code>jupyter lab</code></pre>
+      Or, if not recognized:<br>
+      <pre><code>python -m jupyterlab</code></pre>
     </li>
   </ol>
 
