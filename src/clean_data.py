@@ -1,13 +1,6 @@
 import pandas as pd
 
 def clean_column_names(df: pd.DataFrame) -> pd.DataFrame:
-    """
-    Standardize DataFrame column names:
-      - strip whitespace
-      - lowercase
-      - replace spaces with underscores
-      - remove non-alphanumeric characters
-    """
     df = df.copy()
     df.columns = (
         df.columns
@@ -19,17 +12,10 @@ def clean_column_names(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 def drop_missing(df: pd.DataFrame, subset: list = None) -> pd.DataFrame:
-    """
-    Drop rows with missing values in the specified subset of columns.
-    If subset is None, drop rows with any missing values.
-    """
     return df.dropna(subset=subset)
 
-def parse_dates(df: pd.DataFrame, columns: list) -> pd.DataFrame:
-    """
-    Convert specified columns to datetime dtype.
-    """
+def parse_dates(df: pd.DataFrame, cols: list) -> pd.DataFrame:
     df = df.copy()
-    for col in columns:
-        df[col] = pd.to_datetime(df[col], errors='coerce')
+    for c in cols:
+        df[c] = pd.to_datetime(df[c], errors='coerce')
     return df
