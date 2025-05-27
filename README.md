@@ -11,20 +11,26 @@
 
   <h2>📁 Repository Structure</h2>
   <pre><code>Netflix_Data_Analysis/
-├── data/                             # (empty or contains raw files)
-├── notebooks/
-│   ├── exploratory_analysis.ipynb
-│   └── images/
-│       └── netflix_movies_duration.png
-├── src/
-│   ├── data/
-│   │   ├── load_data.py
-│   │   └── clean_data.py
-│   └── visualization/
-│       └── plot.py
-├── .gitignore
-├── README.md
-└── requirements.txt
+
+├── data/
+│   └── netflix_data.csv        # Raw data file
+├── notebooks/                  # Jupyter notebooks for EDA and prototyping
+│   └── Netflix_EDA.ipynb
+├── src/                        # Python source code
+│   ├── __init__.py             # Makes src a package
+│   ├── load_data.py            # Functions to load and validate data
+│   ├── clean_data.py           # Data cleaning and preprocessing
+│   ├── analyze.py              # Statistical analysis functions
+│   └── visualize.py            # Visualization functions (matplotlib)
+├── tests/                      # Unit tests (pytest)
+│   ├── __init__.py
+│   ├── test_load_data.py
+│   ├── test_clean_data.py
+│   ├── test_analyze.py
+│   └── test_visualize.py
+├── requirements.txt            # Project dependencies
+├── .gitignore                  # Files and directories to ignore
+└── README.html                 # Project documentation (HTML)
 </code></pre>
 
   <h2>📊 Data Description</h2>
