@@ -65,12 +65,17 @@ cd Netflix_Data_Analysis</code></pre>
       <pre><code>python -m pip install --upgrade pip
 python -m pip install -r requirements.txt</code></pre>
     </li>
-    <li>
-      <strong>Launch JupyterLab or Notebook</strong><br>
-      <pre><code>jupyter lab</code></pre>
-      Or, if not recognized:<br>
-      <pre><code>python -m jupyterlab</code></pre>
-    </li>
+ 
+  <h2>Usage</h2>
+  <p>Launch JupyterLab:</p>
+  <pre><code>jupyter lab</code></pre>
+  <p>Or, if not recognized:</p>
+  <pre><code>python -m jupyterlab</code></pre>
+  <p>Run tests:</p>
+  <pre><code>python -m pytest</code></pre>
+  <p>Ensure all tests in the <code>tests/</code> directory pass.</p>
+</body>
+</html>
   </ol>
 
   <h2>📈 Key Insights</h2>
