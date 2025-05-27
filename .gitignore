@@ -1,5 +1,16 @@
+# Virtual environment
 venv/
-.ipynb_checkpoints/
+
+# Python cache and compiled files
 __pycache__/
-*.pyc
-.DS_Store
+*.py[cod]
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/
+
+# Data files
+data/*.csv
+
+# Logs and temporary
+*.log
+*.tmp
