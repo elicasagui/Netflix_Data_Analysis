@@ -1,7 +1,13 @@
-pandas
-numpy
-matplotlib
-pytest
+# Core data analysis
+pandas>=1.5.0
+numpy>=1.20.0
+matplotlib>=3.5.0
+jupyterlab>=3.4.4
 
-jupyterlab
-jupyter
+# Interactive dashboard
+streamlit>=1.0.0
+plotly>=5.0.0
+pydeck>=0.7.0
+
+# Testing
+pytest>=7.0.0
