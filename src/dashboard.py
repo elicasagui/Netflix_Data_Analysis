@@ -1,5 +1,5 @@
 import streamlit as st
-from src.vizualize import (
+from src.visualize import (
     get_data,
     most_frequent_duration,
     short_action_count,
@@ -14,7 +14,7 @@ st.set_page_config(page_title="Netflix 90s EDA", layout="wide")
 movies = get_data()
 duration_value = most_frequent_duration(movies)
 short_count    = short_action_count(movies)
-
+    
 # ——— HEADER METRICS ———
 st.title("🎬 Netflix Data Analysis (1990s)")
 col1, col2 = st.columns(2)
