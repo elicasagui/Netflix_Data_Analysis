@@ -1,8 +1,8 @@
 import pandas as pd
 import plotly.express as px
 
-from src.data.load_data import load_csv
-from src.data.clean_data import clean_column_names, parse_dates
+from src.load_data import load_csv
+from src.clean_data import clean_column_names, parse_dates
 
 def get_data():
     df = load_csv()
